@@ -1,0 +1,28 @@
+<h1>Hoşgeldiniz, Ogretmen <%- user  %>  </h1>
+
+<form action="/homework" method="post">
+ <div class="container">
+     <div class="row">
+         <div class="col-2 padding-top:1em ">Ogrenci Mail</div>
+         <div class="col-3">Mevcut Odevler</div>
+     </div>
+     <% students.forEach(student => { %>
+     <div class="row">
+        <div class="col-2"> <%- student.email  %> </div> 
+        <div class="col-3 "> <%- student.homework  %> </div> 
+    </div>
+    <% }) %>  
+    <div class="block"></div>
+    <div class="row">
+        <div class="col-3"> Odev</div>
+        <div class="col-2"> Ogrencinin email adresi  </div>
+        <div class="col">Ekle</div>
+    </div>
+    <div class="row">
+        <div class="col-3"><input type="text" name="homework"></div>
+        <div class="col-2"> <input class="input100" type="text" name="mail" placeholder="User email"> </div>
+        <div class="col"><button type="submit" class="btn btn-success">Ekle</button></div>
+    </div>
+ </div>
+
+</form>
